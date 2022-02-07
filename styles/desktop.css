@@ -1,0 +1,56 @@
+@media (min-width: 1080px) {
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .sideBarContainer {
+    z-index: 2;
+    display: inline;
+    position: fixed;
+    width: auto;
+    height: 100%;
+    bottom: 0;
+  }
+  .indexContainer section .articleContainer {
+    display: flex;
+  }
+
+  .congressLogo {
+    display: inline;
+    width: 250px;
+    height: 250px;
+    margin-left: 5%;
+  }
+  section {
+    display: flex;
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section .articleContainer p {
+    width: auto;
+    max-width: 1000px;
+  }
+
+  .indexContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  .secondArticle {
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul {
+    width: 320px;
+  }
+
+  .secondSection {
+    margin: 0 0 15px 0;
+    max-width: 85%;
+  }
+}
