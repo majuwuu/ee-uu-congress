@@ -324,6 +324,7 @@ li ol li {
   max-width: 320px;
   padding: 20px 0;
   background-color: var(--dark-gray);
+  border-radius: 10px;
 }
 
 .tC113 {
@@ -339,14 +340,39 @@ li ol li {
   flex-direction: column;
   border-style: none;
 }
+
+option {
+  font-size: small;
+  font-family: "Oswald";
+}
+
+select{
+  display: flex;
+  padding: 5px 10px;
+  height: 42px;
+  margin: 10px auto;
+  min-width: 160px;
+  height: 30px; 
+  border-radius: 7px;
+  font-family: "Oswald";
+}
+
 .formCheckBox {
-   border-style: none;
+  border-style: none;
 }
 .textContainer{
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
+}
+label  {
+  font-family: "Oswald";
+  font-size: smaller;
+}
+legend {
+  font-family: "Oswald";
+  font-size: small;
 }
 
 .textContent{
@@ -398,6 +424,7 @@ td, th {
   border: 1px solid #ccc;
   text-align: left;
   padding: 8px;
+  font-size: small;
 }
 
 tr:nth-child(even) {
