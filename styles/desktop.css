@@ -12,7 +12,7 @@
     height: 100%;
     bottom: 0;
   }
-  .indexContainer section .articleContainer {
+ .sectionContainer {
     display: flex;
   }
 
@@ -30,7 +30,7 @@
     flex-direction: column;
   }
 
-  section .articleContainer p {
+  section .sectionContainer p {
     width: auto;
     max-width: 1000px;
   }
@@ -53,4 +53,37 @@
     margin: 0 0 15px 0;
     max-width: 85%;
   }
+
+  .textContent{
+    max-width: 700px;
+  }
+
+  .textContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: left;
+  }
+
+.tableGroup{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.tC113{
+  overflow: hidden;
+  flex-direction: row;
+}
+
+#c113Section{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+
 }
