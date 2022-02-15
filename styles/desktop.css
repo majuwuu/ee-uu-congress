@@ -12,7 +12,7 @@
     height: 100%;
     bottom: 0;
   }
- .sectionContainer {
+  .sectionContainer {
     display: flex;
   }
 
@@ -26,13 +26,16 @@
     display: flex;
     height: 100%;
     width: auto;
-    display: flex;
     flex-direction: column;
   }
 
   section .sectionContainer p {
     width: auto;
     max-width: 1000px;
+  }
+
+  .secondSection button {
+    width: auto;
   }
 
   .indexContainer {
@@ -54,11 +57,11 @@
     max-width: 85%;
   }
 
-  .textContent{
+  .textContent {
     max-width: 700px;
   }
 
-  .textContainer{
+  .textContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -66,24 +69,27 @@
     text-align: left;
   }
 
-.tableGroup{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding-top: 50px;
-}
+  .tableGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 50px;
+  }
 
-.tC113{
-  overflow: hidden;
-  flex-direction: row;
-}
+  .tC113 {
+    overflow: hidden;
+    flex-direction: row;
+  }
 
-#c113Section{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
-  width: 100%;
-}
+  #c113Section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+  }
 
+  .c113House .artC113 p {
+    margin-right: 90px;
+  }
 }

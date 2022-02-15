@@ -64,10 +64,16 @@ header .logoContainer {
   margin-left: 15px;
 }
 
-header .logoContainer img {
+header .logoContainer a img {
   width: 70px;
   height: 70px;
 }
+
+header .logoContainer a {
+  width: 70px;
+  height: 70px;
+}
+
 .titleContainer :last-child {
   font-size: 0.8rem;
   font-weight: normal;
@@ -108,13 +114,13 @@ header .logoContainer img {
   background-color: var(--dark-gray);
 }
 .sideBarContainer {
-  display: inline;
   z-index: 3;
   width: 100%;
   height: 100%;
   background-color: var(--dark-blue);
   position: absolute;
-  font: 1.2rem;
+  transition: 0.5s all ease-in-out;
+  left: -100%;
 }
 nav ul {
   display: flex;
@@ -134,7 +140,7 @@ nav ul :nth-child(2) div {
   height: 100%;
   width: 100%;
 }
- 
+
 .ItemTitle {
   display: flex;
   align-items: center;
@@ -217,7 +223,7 @@ li ol li {
   display: flex;
   position: relative;
   height: 100%;
-  min-height: 85vh;
+  min-height: 75vh;
   flex-direction: column;
   padding: 20px;
 }
@@ -226,6 +232,10 @@ li ol li {
   width: 100%;
 }
 
+.indexContainer article {
+  height: 100%;
+  width: 100%;
+}
 .indexContainer article h1 {
   font-size: 2rem;
   color: white;
@@ -250,8 +260,7 @@ li ol li {
   border-bottom: 1px solid white;
   cursor: pointer;
   height: auto;
-  padding: 0;
-  padding-bottom: 7px;
+  margin: 30px 0;
   font-weight: bold;
   font-family: 'Oswald';
   font-size: 1.2rem;
@@ -263,7 +272,9 @@ li ol li {
 }
 
 .secondSection {
-  margin: 15px 0;
+  display: none;
+  height: auto;
+  margin: 5px 0;
 }
 
 .secondSection p {
@@ -276,7 +287,17 @@ li ol li {
   font-family: 'Oswald';
 }
 
-.mainAttendanceHouse{
+.secondSection article {
+  border: 2px solid white;
+  padding: 5px;
+}
+
+.secondSection article:hover {
+  border: 2px solid var(--button-color);
+  padding: 5px;
+}
+
+.mainAttendanceHouse {
   z-index: 0;
   display: flex;
   position: relative;
@@ -325,6 +346,7 @@ li ol li {
   padding: 20px 0;
   background-color: var(--dark-gray);
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .tC113 {
@@ -343,68 +365,68 @@ li ol li {
 
 option {
   font-size: small;
-  font-family: "Oswald";
+  font-family: 'Oswald';
 }
 
-select{
+select {
   display: flex;
   padding: 5px 10px;
   height: 42px;
   margin: 10px auto;
   min-width: 160px;
-  height: 30px; 
   border-radius: 7px;
-  font-family: "Oswald";
+  font-family: 'Oswald';
 }
 
 .formCheckBox {
   border-style: none;
 }
-.textContainer{
+.textContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
-label  {
-  font-family: "Oswald";
+label {
+  font-family: 'Oswald';
   font-size: smaller;
+  color: white;
 }
 legend {
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-size: small;
+  color: white;
 }
 
-.textContent{
+.textContent {
   display: flex;
   flex-direction: column;
   height: auto;
   width: 100%;
   padding: 10px;
 }
-.firstTitle{
+.firstTitle {
   font-size: 2rem;
   color: white;
-  font-family: "Oswald";
+  font-family: 'Oswald';
 }
-.title{
+.title {
   font-size: 1.5rem;
   color: white;
-  font-family: "Oswald";
-  padding: 10px 5px 0 5px;
+  font-family: 'Oswald';
+  padding: 13px 5px 0 5px;
   text-align: left;
 }
 
-.tableContainer{
+.tableContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 500px;
   text-align: center;
-  
 }
 
-.tableGroup{
+.tableGroup {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -413,18 +435,19 @@ legend {
 }
 
 table {
-  font-family: "Oswald";
+  font-family: 'Oswald';
   border-collapse: collapse;
   width: 100%;
-  min-width: 300px;
   background-color: white;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #ccc;
   text-align: left;
   padding: 8px;
   font-size: small;
+  width: auto;
 }
 
 tr:nth-child(even) {
