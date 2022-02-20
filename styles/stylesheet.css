@@ -236,10 +236,6 @@ li ol li {
   width: 100%;
 }
 
-.indexContainer article {
-  height: 100%;
-  width: 100%;
-}
 .indexContainer article h1 {
   font-size: 2rem;
   color: white;
@@ -310,7 +306,7 @@ li ol li {
   height: 100%;
   min-height: 85vh;
   flex-direction: column;
-  padding: 20px 5px;
+  padding: 20px 10px;
 }
 
 .c113House {

@@ -1,7 +1,7 @@
+const body = document.body
 const sideBar = document.getElementById("sideBarContainer")
 const exitContainer = document.getElementById("exitContainer")
 const burguerMenu = document.getElementById("burgerMenuContainer")
-const body = document.body
 const readMoreButton = document.getElementById("readMore")
 const article = document.getElementById("dropdownArt")
 const secondSection = document.querySelector(".secondSection")
@@ -30,5 +30,4 @@ const toggleDropdown = () => {
 }
 
 readMoreButton.addEventListener("click", toggleDropdown)
-
 
