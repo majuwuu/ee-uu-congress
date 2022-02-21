@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
-  <title>Party Loyalty|Senate</title>
+  <title>Senate</title>
 </head>
 
 <body>
@@ -114,80 +114,47 @@
         </p>
       </div>
       <div class="tableContainer">
-        <h2 class="title">Senate at a galance</h2>
-        <table>
-          <tr>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>País</th>
-          </tr>
-          <tr>
-            <td>Kiko</td>
-            <td>Palomares</td>
-            <td>España</td>
-          </tr>
-          <tr>
-            <td>Juan</td>
-            <td>Hernández</td>
-            <td>México</td>
-          </tr>
-          <tr>
-            <td>Sofía</td>
-            <td>Martínez</td>
-            <td>Argentina</td>
-          </tr>
+        <h2 class="title">Senate at a glance</h2>
+        <table id="partyGlance">
+          <thead>
+            <tr>
+              <th>Party</th>
+              <th>Number of Reps</th>
+              <th>% Voted With Party</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
         </table>
       </div>
     </div>
     <div class="tableGroup">
       <div class="tableContainer">
-        <h3 class="title">Least Engaged (Bottom 10% Attendance)</h3>
-        <table>
-          <tr>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>País</th>
-          </tr>
-          <tr>
-            <td>Kiko</td>
-            <td>Palomares</td>
-            <td>España</td>
-          </tr>
-          <tr>
-            <td>Juan</td>
-            <td>Hernández</td>
-            <td>México</td>
-          </tr>
-          <tr>
-            <td>Sofía</td>
-            <td>Martínez</td>
-            <td>Argentina</td>
-          </tr>
+        <h3 class="title">Least Loyal (Bottom 10% of Party)</h3>
+        <table id="partyLeast">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number of Party Votes</th>
+              <th>% Party Votes</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
         </table>
       </div>
       <div class="tableContainer">
-        <h4 class="title">Most Engaged (Top 10% Attendance)</h4>
-        <table>
-          <tr>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>País</th>
-          </tr>
-          <tr>
-            <td>Kiko</td>
-            <td>Palomares</td>
-            <td>España</td>
-          </tr>
-          <tr>
-            <td>Juan</td>
-            <td>Hernández</td>
-            <td>México</td>
-          </tr>
-          <tr>
-            <td>Sofía</td>
-            <td>Martínez</td>
-            <td>Argentina</td>
-          </tr>
+        <h4 class="title">Most Loyal (Top 10% of Party)</h4>
+        <table id="partyMost">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Apellidos</th>
+              <th>País</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
         </table>
         </table>
       </div>
@@ -196,7 +163,8 @@
   <footer>
     <p>© 2021 TGIF | ALL RIGHTS RESERVED | INFO@TGIF.NET</p>
   </footer>
-  <script src="../../scripts/index.js"></script>
+  <script type="module" src="../../scripts/index.js"></script>
+  <script type="module" src="../../scripts/modules/partyLoyalty.js"></script>
 </body>
 
 </html>
