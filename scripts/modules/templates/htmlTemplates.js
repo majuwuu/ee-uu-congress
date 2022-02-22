@@ -53,7 +53,7 @@ export const attendanceGlance = (data) => {
     </tr>`
   }
 
-  export const attendanceLeast = (data) {
+  export const attendanceLeast = (data) => {
     return `<tr>
     <td> 
     <a class="tH113" href="${data.url}">
