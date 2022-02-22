@@ -20,7 +20,7 @@ return `<tr>
   </tr>`
 }
 
-export const attendanceGlance = (data) => {
+export const attendance = (data) => {
     return `<tr>
       <td> 
         <a class="tH113" href="${data.url}">
@@ -33,8 +33,21 @@ export const attendanceGlance = (data) => {
       <td>
       ${data.state}
       </td>
-      <td>
-      ${data.seniority}
-      </td>
       </tr>`
-    }
+}
+
+export const attendanceGlance = (data) => {
+  return `<tr>
+    <td> 
+        ${data.party === "R" ? 
+        "Republican" : data.p === "D" ?
+        "Democrats" : "Independent"}
+    </td>
+    <td> 
+    ${data.party}
+    </td>
+    <td>
+    ${data.state}
+    </td>
+    </tr>`
+  }

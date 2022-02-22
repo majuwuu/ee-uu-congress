@@ -83,6 +83,7 @@
 
   .tC113 {
     flex-direction: row;
+    max-height: 40vh;
   }
 
   #c113Section {

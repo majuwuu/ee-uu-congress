@@ -9,6 +9,7 @@ export default async function TGIFService(param, template, elem){
 function printTable(data, template, elem){
   const tbodyRef = elem
   const Template = template(data)
+  console.log(data)
 
   const newRow = tbodyRef.insertRow(tbodyRef.rows.length);
  
