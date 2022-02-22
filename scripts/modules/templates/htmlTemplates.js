@@ -36,12 +36,29 @@ export const attendance = (data) => {
       </tr>`
 }
 
+
 export const attendanceGlance = (data) => {
   return `<tr>
     <td> 
         ${data.party === "R" ? 
         "Republican" : data.p === "D" ?
         "Democrats" : "Independent"}
+    </td>
+    <td> 
+    ${data.party}
+    </td>
+    <td>
+    ${data.state}
+    </td>
+    </tr>`
+  }
+
+  export const attendanceLeast = (data) {
+    return `<tr>
+    <td> 
+    <a class="tH113" href="${data.url}">
+    ${data.last_name}  ${data.first_name}
+    </a>
     </td>
     <td> 
     ${data.party}
