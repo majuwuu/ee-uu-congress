@@ -18,4 +18,3 @@ const closeMenu = ()=> {
 
 exitContainer.addEventListener("click", closeMenu)
 burguerMenu.addEventListener("click", openMenu)
-

@@ -1,6 +1,6 @@
-import TGIFService from "./index.js"
-import { PAGES } from "./templates/pages.js"
-import { attendanceGlance } from "./templates/htmlTemplates.js"
+import TGIFService from "../utils/TGIFService.js"
+import { PAGES } from "../templates/pages.js"
+import { attendanceGlance } from "../templates/htmlTemplates.js"
 
 var partyGlanceElem = document.getElementById("partyGlance").getElementsByTagName('tbody')[0];
 var partyLeastElem = document.getElementById("partyLeast").getElementsByTagName('tbody')[0];

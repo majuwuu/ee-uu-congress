@@ -48,6 +48,7 @@ export const attendanceGlance = (data) => {
     ${data.party}
     </td>
     <td>
+    // aca se haria el calculo de porcentaje
     ${data.state}
     </td>
     </tr>`
@@ -64,6 +65,7 @@ export const attendanceGlance = (data) => {
     ${data.party}
     </td>
     <td>
+    // aca se haria el calculo de porcentaje
     ${data.state}
     </td>
     </tr>`
