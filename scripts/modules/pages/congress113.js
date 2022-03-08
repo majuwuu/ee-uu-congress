@@ -13,6 +13,9 @@ const partyCheckboxList = document.querySelectorAll(".valores");
 const selectState = document.querySelector('#stateSelect')
 const rowArr = []
 
+// estado inicial, sirve como plantilla al arrancar la aplicacion, luego es pasada por parametros a las funciones
+// de filtro para determinar que es lo que filtrara
+
 const obj = {
     "D": null,
     "R": null,
@@ -20,22 +23,25 @@ const obj = {
     "STATE": "ALL"
 }
 
-// retorna los datos de la api para luego filtrar
+// llamado a la api inical
 const Service = TGIFService(path, congress113, tbodyRef)
 .then((data) => {
    return data
 })
 
+// obtiene los datos de la api y lo almacena dentro de rowArr
 Service.then((data) => {
     rowArr.push(data)
     getState(rowArr) 
 })
 
 //filtra lo que venga de checkboxParty y pintara los nuevos datos
-
 const filteredService = (obj) =>{
+    // utiliza el array 'crudo' para filtrar segun los parametros de la plantilla
     const newArr = CheckboxFilter(rowArr, obj)
+    // se elimina el contenido de tbody para pintar el nuevo contenido filtrado
     tbodyRef.innerText = ""
+    // pintara los nuevos datos
     TGIFService(path, congress113, tbodyRef, newArr)
 }
 
@@ -52,11 +58,13 @@ const checkboxParty = () => {
 
 const getState = (data) => {
     const allState = []
+    // si el estado no existe en el array entonces lo pushea
     data[0].results[0].members.forEach((member) => {
         if(!allState.includes(member.state)){
             allState.push(member.state)
         }
     })
+    // Ordena los nuevos estados y los incluye dentro del elemento select
     allState.sort().forEach((state) =>{
         const option = document.createElement('option')
         option.value = state;
@@ -65,6 +73,7 @@ const getState = (data) => {
     })
 }
 
+// captadores de eventos, cuando cambien entonces filtraran informacion dependiendo su estado
 selectState.addEventListener('change', checkboxParty)
 DemocratCheckbox.addEventListener('change', checkboxParty)
 IndependentCheckbox.addEventListener('change', checkboxParty)

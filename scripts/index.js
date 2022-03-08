@@ -10,7 +10,6 @@ const openMenu = () => {
   sideBar.style.left = "0%"
 }
 
-
 const closeMenu = ()=> {
   sideBar.style.left = "-100%"
   body.style.overflowY = "auto"
