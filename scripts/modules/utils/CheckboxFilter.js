@@ -14,7 +14,7 @@ const CheckboxFilter = (apiData, party) => {
     // console.log(keyArr)
 
        filteredBy.map(param => {
-        apiData[0].results[0].members.filter((res) => res.party === param && arr.push(res));
+        apiData[0].results[0].members.filter((res) => res.party === param && res.state === party["STATE"] && arr.push(res));
         })
 
 
@@ -24,7 +24,7 @@ const CheckboxFilter = (apiData, party) => {
         // si el estado del select es igual a 'all' entonces filtrara lo que venga en las keys
         // si no, filtrara por estado
         // console.log(res.party === party["D"])
-        // party["STATE"] !== "all" &&
+        // party["STATE"] !== "all" &&  
         // res.state === party["STATE]
         //  })
 
