@@ -17,11 +17,12 @@ const rowArr = []
 // de filtro para determinar que es lo que filtrara
 
 const obj = {
-    "D": null,
-    "R": null,
-    "I": null,
+    "D": false,
+    "R": false,
+    "I": false,
     "STATE": "ALL"
 }
+
 
 // llamado a la api inical
 const Service = TGIFService(path, congress113, tbodyRef)
@@ -40,6 +41,7 @@ const filteredService = (obj) =>{
     // utiliza el array 'crudo' para filtrar segun los parametros de la plantilla
     const newArr = CheckboxFilter(rowArr, obj)
     // se elimina el contenido de tbody para pintar el nuevo contenido filtrado
+    console.log(newArr)
     tbodyRef.innerText = ""
     // pintara los nuevos datos
     TGIFService(path, congress113, tbodyRef, newArr)
@@ -52,6 +54,7 @@ const checkboxParty = () => {
             obj[e.value] = true
         }else(obj[e.value] = false)
     })
+    
     // agrupa en un array las opciones de filtro "D", "I", "R"
     filteredService(obj)
 }
@@ -74,7 +77,6 @@ const getState = (data) => {
 }
 
 // captadores de eventos, cuando cambien entonces filtraran informacion dependiendo su estado
-selectState.addEventListener('change', checkboxParty)
 DemocratCheckbox.addEventListener('change', checkboxParty)
 IndependentCheckbox.addEventListener('change', checkboxParty)
 selectState.onclick = (event) => {

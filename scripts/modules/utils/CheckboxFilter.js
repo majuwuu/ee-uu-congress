@@ -12,8 +12,9 @@ const CheckboxFilter = (apiData, party) => {
         // si el estado del select es igual a 'all' entonces filtrara lo que venga en las keys
         // si no, filtrara por estado
         party["STATE"] === "all" ? 
-        res.party === keys : 
-        res.state === party["STATE"]
+        console.log(true) : console.log(false)
+        // res.party === keys : 
+        // res.state === party["STATE"]
         )
         // elimina el contenido anterior del array y es reemplazado con el nuevo contenido del filtro
         arr.splice()
