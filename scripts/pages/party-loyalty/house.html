@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/styles/stylesheet.css" />
   <link rel="stylesheet" href="/styles/desktop.css" />
+  <link rel="stylesheet" href="/pages/attendance/" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
     integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,76 +101,75 @@
       </ul>
     </nav>
   </header>
-  <main class="c113House">
-    <section id="c113Section">
-      <article class="artC113">
-        <h1 class="firstTitle">Congressmen</h1>
-        <p>
-          The major power of the House is to pass federal
-          legislation that affects the entire country, although
-          its bills must also be passed by the Senate and further
-          agreed to by the U.S. President before becoming law
-          (unless both the House and Senate re-pass the legislation
-          with a two-thirds majority in each chamber). The House has
-          some exclusive powers: the power to initiate revenue bills,
-          to impeach officials (impeached officials are subsequently
-          tried in the Senate), and to elect the U.S. President in
-          case there is no majority in the Electoral College.
-          Each U.S. state is represented in the House in proportion
-          to its population as measured in the census, but every
-          state is entitled to at least one representative.
+  <main class="mainAttendanceHouse">
+    <div class="textContainer">
+      <div class="textContent">
+        <h1 class="firstTitle">Party Loyalty</h1>
+        <p class="party">
+          Those who consider themselves to be strong
+          partisans, strong Democrats and strong Republicans
+          respectively, tend to be the most faithful in voting
+          for their party's nominee for office and legislation
+          that backs their party's agenda.
         </p>
-      </article>
-      <form class="c113HformCont" action="" method="post">
-        <fieldset class="formCheckBox">
-          <legend>Filter by Party</legend>
-          <div>
-            <input type="checkbox" value="democrat" name="" id="checkbox" class="valores" checked>
-            <label class="" for="">Democrat</label>
-          </div>
-          <div>
-            <input type="checkbox" value="independent" name="" id="checkbox" class="valores" checked>
-            <label class="" for="">Independent</label>
-          </div>
-          <div>
-            <input type="checkbox" value="republican" name="" id="checkbox" class="valores" checked>
-            <label class="" for="">Republican</label>
-          </div>
-        </fieldset>
-        <fieldset class="formSelect">
-          <label for="stateSelected">Filter by State:</label>
-          <select name="" id="" aria-label="Default select Example">
-            <option value="">All</option>
-            <option value="">Atlanta</option>
-            <option value="">The Game</option>
-            <option value="">Perdi 2</option>
-          </select>
-        </fieldset>
-      </form>
-    </section>
-    <div class="tC113">
-      <table id="113-houseTable">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Party</th>
-            <th>State</th>
-            <th>Years in Office</th>
-            <th>% Votes w/ Party</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+      </div>
+      <div class="tableContainer">
+        <h2 class="title">House at a glance</h2>
+        <div class="tGalanceHouse">
+          <table id="partyGlance">
+            <thead>
+              <tr>
+                <th>Party</th>
+                <th>Number of Reps</th>
+                <th>% Voted With Party</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="tableGroup">
+      <div class="tableContainer">
+        <h3 class="title">Least Loyal (Bottom 10% of Party)</h3>
+        <div class="tC113">
+          <table id="partyLeast">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Number of Party Votes</th>
+                <th>% Party Votes</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tableContainer">
+        <h4 class="title">Most Loyal (Top 10% of Party)</h4>
+        <div class="tC113">
+          <table id="partyMost">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Apellidos</th>
+                <th>País</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </main>
   <footer>
     <p>© 2021 TGIF | ALL RIGHTS RESERVED | INFO@TGIF.NET</p>
   </footer>
-  <!-- <script type="module" src="../../scripts/modules/congress113.js"></script> -->
-
+  <script type="module" src="../../scripts/index.js"></script>
+  <script type="module" src="../../scripts/modules/partyLoyalty.js"></script>
 </body>
-<script type="module" src="../../scripts/alternativeFilter.js"></script>
-<script type="module" src="../../scripts/index.js"></script>
 
 </html>
