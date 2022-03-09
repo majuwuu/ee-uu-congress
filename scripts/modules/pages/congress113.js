@@ -17,9 +17,9 @@ const rowArr = []
 // de filtro para determinar que es lo que filtrara
 
 const obj = {
-    "D": false,
-    "R": false,
-    "I": false,
+    "D": true,
+    "R": true,
+    "I": true,
     "STATE": "ALL"
 }
 
@@ -41,7 +41,6 @@ const filteredService = (obj) =>{
     // utiliza el array 'crudo' para filtrar segun los parametros de la plantilla
     const newArr = CheckboxFilter(rowArr, obj)
     // se elimina el contenido de tbody para pintar el nuevo contenido filtrado
-    console.log(newArr)
     tbodyRef.innerText = ""
     // pintara los nuevos datos
     TGIFService(path, congress113, tbodyRef, newArr)
@@ -51,8 +50,8 @@ const filteredService = (obj) =>{
 const checkboxParty = () => {
     partyCheckboxList.forEach(e =>{
         if(e.checked === true){
-            obj[e.value] = true
-        }else(obj[e.value] = false)
+            obj[e.value] = false
+        }else(obj[e.value] = true)
     })
     
     // agrupa en un array las opciones de filtro "D", "I", "R"
