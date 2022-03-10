@@ -122,25 +122,25 @@
         <fieldset class="formCheckBox">
           <legend>Filter by Party</legend>
           <div>
-            <input class="" type="checkbox" value="" name="" id="" checked>
+            <input class="valores" type="checkbox" value="" name="" checked>
             <label class="" for="">Democrat</label>
           </div>
           <div>
-            <input class="" type="checkbox" value="" name="" id="" checked>
+            <input class="valores" type="checkbox" value="" name="" checked>
             <label class="" for="">Independent</label>
           </div>
           <div>
-            <input class="" type="checkbox" value="" name="" id="" checked>
+            <input class="valores" type="checkbox" value="" name="" checked>
             <label class="" for="">Republican</label>
           </div>
         </fieldset>
         <fieldset class="formSelect">
           <label for="stateSelected">Filter by State:</label>
-          <select name="" id="" aria-label="Default select Example">
-            <option value="">All</option>
-            <option value="">Atlanta</option>
-            <option value="">The Game</option>
-            <option value="">Perdi 2</option>
+          <select name="" id="selector" aria-label="Default select Example">
+            <option value="all">All</option>
+            <option value="CA">CA</option>
+            <option value="AL">AL</option>
+            <option value="IL">IL</option>
           </select>
         </fieldset>
       </form>
@@ -156,7 +156,7 @@
             <th>% Votes w/ Party</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tableBody">
         </tbody>
       </table>
     </div>
@@ -164,8 +164,8 @@
   <footer>
     <p>© 2021 TGIF | ALL RIGHTS RESERVED | INFO@TGIF.NET</p>
   </footer>
-  <script type="module" src="../../scripts/index.js"></script>
-  <script type="module" src="../../scripts/modules/congress113.js"></script>
 </body>
+<script type="module" src="../../scripts/index.js"></script>
+<script type="module" src="../../scripts/alternativeFilter.js"></script>
 
 </html>

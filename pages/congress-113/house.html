@@ -124,25 +124,25 @@
         <fieldset class="formCheckBox">
           <legend>Filter by Party</legend>
           <div>
-            <input type="checkbox" value="democrat" name="" id="checkbox" class="valores" checked>
+            <input type="checkbox" value="democrat" name="" class="valores" checked>
             <label class="" for="">Democrat</label>
           </div>
           <div>
-            <input type="checkbox" value="independent" name="" id="checkbox" class="valores" checked>
+            <input type="checkbox" value="independent" name="" class="valores" checked>
             <label class="" for="">Independent</label>
           </div>
           <div>
-            <input type="checkbox" value="republican" name="" id="checkbox" class="valores" checked>
+            <input type="checkbox" value="republican" name="" class="valores" checked>
             <label class="" for="">Republican</label>
           </div>
         </fieldset>
         <fieldset class="formSelect">
           <label for="stateSelected">Filter by State:</label>
-          <select name="" id="" aria-label="Default select Example">
-            <option value="">All</option>
-            <option value="">Atlanta</option>
-            <option value="">The Game</option>
-            <option value="">Perdi 2</option>
+          <select name="" id="selector" aria-label="Default select Example">
+            <option value="all">All</option>
+            <option value="CA">CA</option>
+            <option value="AL">AL</option>
+            <option value="IL">IL</option>
           </select>
         </fieldset>
       </form>
@@ -158,7 +158,7 @@
             <th>% Votes w/ Party</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tableBody">
         </tbody>
       </table>
     </div>
