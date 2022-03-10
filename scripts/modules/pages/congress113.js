@@ -41,7 +41,7 @@ const filteredService = (obj) =>{
     // utiliza el array 'crudo' para filtrar segun los parametros de la plantilla
     const newArr = CheckboxFilter(rowArr, obj)
     // se elimina el contenido de tbody para pintar el nuevo contenido filtrado
-    tbodyRef.innerText = ""
+    tbodyRef.innerText = ""     
     // pintara los nuevos datos
     TGIFService(path, congress113, tbodyRef, newArr)
 }
