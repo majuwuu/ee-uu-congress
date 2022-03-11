@@ -1,5 +1,5 @@
-import congressService from "./services/index.service.js"
-import printTable from "./templates/printTable.js"
+import congressService from "./index.service.js"
+import printTable from "../utils/printTable.js"
 
 export default async function TGIFService(param, template, elem){
   let CS = await congressService(param)
