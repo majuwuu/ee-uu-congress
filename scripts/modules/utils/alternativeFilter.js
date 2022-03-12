@@ -16,13 +16,21 @@ const alternativeFilter = async () => {
     const filters = {
         D: true,
         R: true,
-        I: true,
+        ID: true,
         STATE: "all"
     }
-    const filterMembers = (filterChanged) => {
-        // let membersFilter =
-        console.log(filterChanged)
+    
+    const printTboby = (membersToRender) => {
+        tableBody.innerHTML = ""
+        console.log(membersToRender)
     }
+
+    const filterMembers = (filterChanged) => {
+        let membersFilter = members.filter( member => (filterChanged[member.party] == true ))
+        membersFilter = membersFilter.filter(member => (filterChanged.STATE == member.state || filterChanged.STATE == "all"))
+        printTboby(membersFilter)
+    }
+    
     const changeFilter = (e) => {
         if(e.target.checked === undefined){
             filters.STATE = e.target.value
@@ -30,14 +38,11 @@ const alternativeFilter = async () => {
             filters[e.target.value] = e.target.checked
         }
         filterMembers(filters)
-        
-        // console.log(e.target.checked)
-        // console.log(e.target.value)
     }
 
     selector.addEventListener("change", (e)=>{ 
         changeFilter(e)
-    } )
+    })
     
     checkboxes.forEach(checkbox =>{
         checkbox.addEventListener("change", (e)=>{
