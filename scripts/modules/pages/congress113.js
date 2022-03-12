@@ -1,6 +1,6 @@
 import TGIFService from "../services/index.js"
-import { PAGES } from "../templates/pages.js"
-import { congress113 } from "../templates/htmlTemplates.js"
+import { PAGES } from "../utils/pages.js"
+import { congress113 } from "../utils/htmlTemplates.js"
 
 var tbodyRef = document.getElementById("113-houseTable").getElementsByTagName('tbody')[0];
 

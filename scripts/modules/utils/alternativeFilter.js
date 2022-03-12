@@ -1,5 +1,8 @@
 import congressService from "../services/index.service.js"
 import { PAGES } from "./pages.js"
+import printTable from "./printTable.js"
+import { congress113 } from "../utils/htmlTemplates.js"
+
 
 const tableBody = document.getElementById("tableBody")
 const selector = document.getElementById("selector")
@@ -22,7 +25,7 @@ const alternativeFilter = async () => {
     
     const printTboby = (membersToRender) => {
         tableBody.innerHTML = ""
-        console.log(membersToRender)
+        membersToRender.map((data) =>  printTable(data, congress113, tableBody))
     }
 
     const filterMembers = (filterChanged) => {
